@@ -6,4 +6,4 @@
 [build.environment]
   # 3. Cette variable dit à Netlify de ne pas essayer de deviner le projet
   # et de juste exécuter la commande ci-dessus.
-  ANGULAR_PROJECT = "none"
+  ANGULAR_PROJECT = "main"
