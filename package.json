@@ -1,0 +1,52 @@
+{
+  "name": "potager-fronts",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start:all": "concurrently \"npm run start:dashboard\" \"npm run start:inprogress\" \"npm run start:history\" \"npm run start:stocks\" \"npm run start:search\"",
+    "build:all": "npm run build:dashboard && npm run build:inprogress && npm run build:stocks",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "start:dashboard": "ng serve dashboard --port 4201",
+    "start:inprogress": "ng serve inprogress --port 4202",
+    "start:history": "ng serve history --port 4203",
+    "start:stocks": "ng serve stocks --port 4204",
+    "start:search": "ng serve inprogress --port 4205",
+    "build:dashboard": "ng build dashboard --output-path=dist/main",
+    "build:inprogress": "ng build inprogress --base-href=/inprogress/ --output-path=dist/main/inprogress",
+    "build:stocks": "ng build stocks --base-href=/stocks/ --output-path=dist/main/stocks"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@11.14.0",
+  "dependencies": {
+    "@angular/common": "^22.0.0",
+    "@angular/compiler": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/forms": "^22.0.0",
+    "@angular/platform-browser": "^22.0.0",
+    "@angular/router": "^22.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.0.0",
+    "@angular/cli": "^22.0.0",
+    "@angular/compiler-cli": "^22.0.0",
+    "jsdom": "^28.0.0",
+    "ng-packagr": "^22.0.0",
+    "typescript": "~6.0.3",
+    "vitest": "^4.0.8"
+  }
+}

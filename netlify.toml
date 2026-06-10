@@ -1,0 +1,4 @@
+[build]
+  publish = "dist/main"
+  # Vous pouvez chaîner vos commandes de build ici
+  command = "npm run build:all"
