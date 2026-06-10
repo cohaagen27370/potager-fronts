@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start:all": "concurrently \"npm run start:dashboard\" \"npm run start:inprogress\" \"npm run start:history\" \"npm run start:stocks\" \"npm run start:search\"",
-    "build:all": "npm run build:dashboard && npm run build:inprogress && npm run build:stocks",
+    "build:all": "npm run build:dashboard && npm run build:inprogress && npm run build:stocks && npm run build:history && npm run build:search && npm run postbuild:all",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:dashboard": "ng serve dashboard --port 4201",
@@ -14,7 +14,10 @@
     "start:search": "ng serve inprogress --port 4205",
     "build:dashboard": "ng build dashboard --output-path=dist/main",
     "build:inprogress": "ng build inprogress --base-href=/inprogress/ --output-path=dist/main/inprogress",
-    "build:stocks": "ng build stocks --base-href=/stocks/ --output-path=dist/main/stocks"
+    "build:stocks": "ng build stocks --base-href=/stocks/ --output-path=dist/main/stocks",
+    "build:history": "ng build history --base-href=/history/ --output-path=dist/main/history",
+    "build:search": "ng build search --base-href=/search/ --output-path=dist/main/search",
+    "postbuild:all": "mkdir -p dist/main/browser/inprogress && cp -r dist/main/inprogress/browser/* dist/main/browser/inprogress/ && mkdir -p dist/main/browser/stocks && cp -r dist/main/stocks/browser/* dist/main/browser/stocks/ && mkdir -p dist/main/browser/history && cp -r dist/main/history/browser/* dist/main/browser/history/ && mkdir -p dist/main/browser/search && cp -r dist/main/search/browser/* dist/main/browser/search/"
   },
   "prettier": {
     "printWidth": 100,
