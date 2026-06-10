@@ -12,12 +12,12 @@
     "start:history": "ng serve history --port 4203",
     "start:stocks": "ng serve stocks --port 4204",
     "start:search": "ng serve inprogress --port 4205",
-    "build:dashboard": "ng build dashboard --output-path=dist/main",
-    "build:inprogress": "ng build inprogress --base-href=/inprogress/ --output-path=dist/main/inprogress",
-    "build:stocks": "ng build stocks --base-href=/stocks/ --output-path=dist/main/stocks",
-    "build:history": "ng build history --base-href=/history/ --output-path=dist/main/history",
-    "build:search": "ng build search --base-href=/search/ --output-path=dist/main/search",
-    "postbuild:all": "mkdir -p dist/main/browser/inprogress && cp -r dist/main/inprogress/browser/* dist/main/browser/inprogress/ && mkdir -p dist/main/browser/stocks && cp -r dist/main/stocks/browser/* dist/main/browser/stocks/ && mkdir -p dist/main/browser/history && cp -r dist/main/history/browser/* dist/main/browser/history/ && mkdir -p dist/main/browser/search && cp -r dist/main/search/browser/* dist/main/browser/search/"
+    "build:dashboard": "ng build dashboard --output-path=dist/dashboard",
+    "build:inprogress": "ng build inprogress --base-href=/inprogress/ --output-path=dist/dashboard/inprogress",
+    "build:stocks": "ng build stocks --base-href=/stocks/ --output-path=dist/dashboard/stocks",
+    "build:history": "ng build history --base-href=/history/ --output-path=dist/dashboard/history",
+    "build:search": "ng build search --base-href=/search/ --output-path=dist/dashboard/search",
+    "postbuild:all": "mkdir -p dist/dashboard/browser/inprogress && cp -r dist/dashboard/inprogress/browser/* dist/dashboard/browser/inprogress/ && mkdir -p dist/dashboard/browser/stocks && cp -r dist/dashboard/stocks/browser/* dist/dashboard/browser/stocks/ && mkdir -p dist/dashboard/browser/history && cp -r dist/dashboard/history/browser/* dist/dashboard/browser/history/ && mkdir -p dist/dashboard/browser/search && cp -r dist/dashboard/search/browser/* dist/dashboard/browser/search/"
   },
   "prettier": {
     "printWidth": 100,

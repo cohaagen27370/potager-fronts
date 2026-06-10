@@ -1,15 +1,9 @@
-[[plugins]]
-  # Cette ligne magique désactive le plugin Angular automatique de Netlify
-  package = "@netlify/plugin-angular"
-  [plugins.inputs]
-    disable = true
-
 [build]
-  publish = "dist/main/browser"
+  publish = "dist/dashboard/browser"
   # Vous pouvez chaîner vos commandes de build ici
   command = "npm run build:all"
 
 [build.environment]
   # 3. Cette variable dit à Netlify de ne pas essayer de deviner le projet
   # et de juste exécuter la commande ci-dessus.
-  ANGULAR_PROJECT = "main"
+  ANGULAR_PROJECT = "dashboard"
