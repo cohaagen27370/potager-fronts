@@ -15,8 +15,12 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "business": ["./dist/shared/business"],
-      "ui": ["./dist/shared/ui"]
+      "@business": [
+        "./dist/shared/business"
+      ],
+      "@ui": [
+        "./projects/shared/ui/src/public-api.ts"
+      ]
     }
   },
   "angularCompilerOptions": {

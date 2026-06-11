@@ -29,7 +29,12 @@
                 "input": "projects/apps/dashboard/public"
               }
             ],
-            "styles": ["projects/apps/dashboard/src/styles.scss"]
+            "styles": [
+              "projects/apps/dashboard/src/styles.scss",
+              "projects/shared/styles/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,7 +55,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/apps/dashboard/src/environments/environment.ts",
+                  "with": "projects/apps/dashboard/src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -95,7 +106,17 @@
                 "input": "projects/apps/inprogress/public"
               }
             ],
-            "styles": ["projects/apps/inprogress/src/styles.scss"]
+            "styles": [
+              "projects/apps/inprogress/src/styles.scss",
+              "projects/shared/styles/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/shared/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -116,7 +137,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/apps/inprogress/src/environments/environment.ts",
+                  "with": "projects/apps/inprogress/src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -161,7 +188,17 @@
                 "input": "projects/apps/stocks/public"
               }
             ],
-            "styles": ["projects/apps/stocks/src/styles.scss"]
+            "styles": [
+              "projects/apps/stocks/src/styles.scss",
+              "projects/shared/styles/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/shared/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -227,7 +264,17 @@
                 "input": "projects/apps/history/public"
               }
             ],
-            "styles": ["projects/apps/history/src/styles.scss"]
+            "styles": [
+              "projects/apps/history/src/styles.scss",
+              "projects/shared/styles/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/shared/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -293,7 +340,17 @@
                 "input": "projects/apps/search/public"
               }
             ],
-            "styles": ["projects/apps/search/src/styles.scss"]
+            "styles": [
+              "projects/apps/search/src/styles.scss",
+              "projects/shared/styles/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/shared/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -338,18 +395,18 @@
     },
     "ui": {
       "projectType": "library",
-      "root": "projects/ui",
-      "sourceRoot": "projects/ui/src",
+      "root": "projects/shared/ui",
+      "sourceRoot": "projects/shared/ui/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/shared/ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ui/tsconfig.lib.json"
+              "tsConfig": "projects/shared/ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -357,25 +414,25 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/ui/tsconfig.spec.json"
+            "tsConfig": "projects/shared/ui/tsconfig.spec.json"
           }
         }
       }
     },
     "business": {
       "projectType": "library",
-      "root": "projects/business",
-      "sourceRoot": "projects/business/src",
+      "root": "projects/shared/business",
+      "sourceRoot": "projects/shared/business/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "configurations": {
             "production": {
-              "tsConfig": "projects/business/tsconfig.lib.prod.json"
+              "tsConfig": "projects/shared/business/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/business/tsconfig.lib.json"
+              "tsConfig": "projects/shared/business/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -383,7 +440,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "projects/business/tsconfig.spec.json"
+            "tsConfig": "projects/shared/business/tsconfig.spec.json"
           }
         }
       }
