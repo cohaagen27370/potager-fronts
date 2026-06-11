@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { Layout } from '@ui';
+import { Layout, RapidStats, SeasonStrip } from '@ui';
 
 @Component({
   selector: 'app-root',
-  imports: [Layout],
+  imports: [Layout, SeasonStrip, RapidStats],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('dashboard');

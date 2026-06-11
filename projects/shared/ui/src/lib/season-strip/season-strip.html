@@ -1,0 +1,33 @@
+<div class="season-strip">
+  <div class="season-strip-label">Calendrier de l'année maraîchère</div>
+  <div class="season-track" id="season-track">
+    <div class="season-seg hiver">Hiver</div>
+    <div class="season-seg printemps">Printemps</div>
+    <div class="season-seg ete">Été</div>
+    <div class="season-seg automne">Automne</div>
+    <div
+      class="season-cursor"
+      id="season-cursor"
+      [title]="dayFromFirst + ' jours depuis le début de l\'année'"
+      [style.left.%]="index()"
+    ></div>
+  </div>
+  <div class="season-events">
+    <div class="season-event-pin">
+      <div class="pin-dot warning"></div>
+      Saints de glace — 11 mai
+    </div>
+    <div class="season-event-pin">
+      <div class="pin-dot"></div>
+      Solstice d'été — 21 juin
+    </div>
+    <div class="season-event-pin">
+      <div class="pin-dot"></div>
+      Dernier gel — ~15 avril
+    </div>
+    <div class="season-event-pin">
+      <div class="pin-dot danger"></div>
+      Canicule probable — juil./août
+    </div>
+  </div>
+</div>
