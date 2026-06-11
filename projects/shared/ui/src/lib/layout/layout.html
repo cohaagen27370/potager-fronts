@@ -1,56 +1,68 @@
 <aside class="sidebar">
-    <div class="sidebar-logo">
-        <h1>🌿 Mon<br>Potager</h1>
-        <p>Carnet de culture</p>
+  <div class="sidebar-logo">
+    <h1>🌿 Mon<br />Potager</h1>
+    <p>Carnet de culture</p>
+  </div>
+
+  <nav>
+    <div class="nav-section">
+      <div class="nav-label">Navigation</div>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'dashboard'}"
+        (click)="activatePage('dashboard')"
+      >
+        <span class="nav-icon">🏡</span>
+        <span>Tableau de bord</span>
+      </button>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'cultures'}"
+        (click)="activatePage('cultures')"
+      >
+        <span class="nav-icon">🌱</span>
+        <span>Cultures en cours</span>
+      </button>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'graines'}"
+        (click)="activatePage('graines')"
+      >
+        <span class="nav-icon">🫘</span>
+        <span>Stock de graines</span>
+      </button>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'recherche'}"
+        (click)="activatePage('recherche')"
+      >
+        <span class="nav-icon">🫘</span>
+        <span>Recherche</span>
+      </button>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'historique'}"
+        (click)="activatePage('historique')"
+      >
+        <span class="nav-icon">📅</span>
+        <span>Historique</span>
+      </button>
+      <button
+        [ngClass]="{'nav-item': true, 'active': activePage() === 'detail-plante'}"
+        (click)="activatePage('detail-plante')"
+      >
+        <span class="nav-icon">📅</span>
+        <span>Détails plante</span>
+      </button>
     </div>
+  </nav>
 
-    <nav>
-        <div class="nav-section">
-            <div class="nav-label">Navigation</div>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'dashboard'}"
-                (click)="activatePage('dashboard')">
-                <span class="nav-icon">🏡</span>
-                <span>Tableau de bord</span>
-            </button>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'cultures'}"
-                (click)="activatePage('cultures')">
-                <span class="nav-icon">🌱</span>
-                <span>Cultures en cours</span>
-            </button>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'graines'}"
-                (click)="activatePage('graines')">
-                <span class="nav-icon">🫘</span>
-                <span>Stock de graines</span>
-            </button>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'recherche'}"
-                (click)="activatePage('recherche')">
-                <span class="nav-icon">🫘</span>
-                <span>Recherche</span>
-            </button>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'historique'}"
-                (click)="activatePage('historique')">
-                <span class="nav-icon">📅</span>
-                <span>Historique</span>
-            </button>
-            <button [ngClass]="{'nav-item': true, 'active': activePage() === 'detail-plante'}"
-                (click)="activatePage('detail-plante')">
-                <span class="nav-icon">📅</span>
-                <span>Détails plante</span>
-            </button>
-        </div>
-    </nav>
-
-    <div class="sidebar-footer">v1.0 · 2026</div>
+  <div class="sidebar-footer">v1.0 · 2026</div>
 </aside>
 
 <!-- MAIN -->
 <main class="main">
-    <header class="topbar">
-        <div class="topbar-title" id="page-title">{{ title() }}</div>
-        <div class="topbar-date" id="topbar-date"></div>
-    </header>
+  <header class="topbar">
+    <div class="topbar-title" id="page-title">{{ title() }}</div>
+    <div class="topbar-date" id="topbar-date">{{ now | date :'longDate' }}</div>
+  </header>
 
-    <div class="content">
-        <ng-content></ng-content>
-    </div>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
 </main>
