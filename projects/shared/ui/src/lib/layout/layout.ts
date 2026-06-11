@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
+import { environment } from '@business';
 
 @Component({
   selector: 'lib-layout',
@@ -13,16 +14,14 @@ export class Layout {
 
   activePage = input.required<'dashboard' | 'cultures' | 'graines' | 'recherche' | 'historique' | 'detail-plante'>();
 
-  environment = input.required<{ urls: { dashboard: string, inprogress: string } }>();
-
 
   activatePage(page: 'dashboard' | 'cultures' | 'graines' | 'recherche' | 'historique' | 'detail-plante') {
     switch (page) {
       case 'dashboard':
-        window.location.href = this.environment().urls.dashboard;
+        window.location.href = environment.urls.dashboard;
         break;
       case 'cultures':
-        window.location.href = this.environment().urls.inprogress;
+        window.location.href = environment.urls.inprogress;
         break;
     }
   }

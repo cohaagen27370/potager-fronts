@@ -16,7 +16,7 @@
     "module": "preserve",
     "paths": {
       "@business": [
-        "./dist/shared/business"
+        "./projects/shared/business/src/public-api.ts"
       ],
       "@ui": [
         "./projects/shared/ui/src/public-api.ts"
@@ -32,46 +32,46 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/dashboard/tsconfig.app.json"
+      "path": "./projects/apps/dashboard/tsconfig.app.json"
     },
     {
-      "path": "./projects/dashboard/tsconfig.spec.json"
+      "path": "./projects/apps/dashboard/tsconfig.spec.json"
     },
     {
-      "path": "./projects/inprogress/tsconfig.app.json"
+      "path": "./projects/apps/inprogress/tsconfig.app.json"
     },
     {
-      "path": "./projects/inprogress/tsconfig.spec.json"
+      "path": "./projects/apps/inprogress/tsconfig.spec.json"
     },
     {
-      "path": "./projects/stocks/tsconfig.app.json"
+      "path": "./projects/apps/stocks/tsconfig.app.json"
     },
     {
-      "path": "./projects/stocks/tsconfig.spec.json"
+      "path": "./projects/apps/stocks/tsconfig.spec.json"
     },
     {
-      "path": "./projects/history/tsconfig.app.json"
+      "path": "./projects/apps/history/tsconfig.app.json"
     },
     {
-      "path": "./projects/history/tsconfig.spec.json"
+      "path": "./projects/apps/history/tsconfig.spec.json"
     },
     {
-      "path": "./projects/search/tsconfig.app.json"
+      "path": "./projects/apps/search/tsconfig.app.json"
     },
     {
-      "path": "./projects/search/tsconfig.spec.json"
+      "path": "./projects/apps/search/tsconfig.spec.json"
     },
     {
-      "path": "./projects/ui/tsconfig.lib.json"
+      "path": "./projects/shared/ui/tsconfig.lib.json"
     },
     {
-      "path": "./projects/ui/tsconfig.spec.json"
+      "path": "./projects/shared/ui/tsconfig.spec.json"
     },
     {
-      "path": "./projects/business/tsconfig.lib.json"
+      "path": "./projects/shared/business/tsconfig.lib.json"
     },
     {
-      "path": "./projects/business/tsconfig.spec.json"
+      "path": "./projects/shared/business/tsconfig.spec.json"
     }
   ]
 }

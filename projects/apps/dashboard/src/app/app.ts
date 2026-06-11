@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { Layout } from '@ui';
-import { environment as Environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,4 @@ import { environment as Environment } from '../environments/environment';
 })
 export class App {
   protected readonly title = signal('dashboard');
-
-  environment = Environment;
 }
